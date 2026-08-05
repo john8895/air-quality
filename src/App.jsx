@@ -8,11 +8,11 @@ function App() {
   const [search, setSearch] = useState('')
 
   useEffect(() => {
-    fetch('/api/moenv/api/v2/aqx_p_432?api_key=218c35f1-d697-447c-927f-677ea69efa8f&limit=1000&sort=ImportDate%20desc&format=JSON')
+    fetch('/api/v2/aqx_p_432?api_key=218c35f1-d697-447c-927f-677ea69efa8f&limit=1000&sort=ImportDate%20desc&format=JSON')
       .then(res => res.json())
       .then(data => {
         console.log(data)
-        setStations(data)
+        setStations(data.records ?? [])
       })
   }, [])
 
@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div>
-      <h1>空氣品質地圖</h1>
+      <h1 className='text-blue-500'>空氣品質地圖</h1>
       <input
         type="text"
         value={search}
