@@ -10,6 +10,7 @@ export default defineConfig({
       '/api': {
         target: 'https://data.moenv.gov.tw',
         changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/moenv/, ''),
       },
     },
   },
