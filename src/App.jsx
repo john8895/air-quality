@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     fetch(
-      "/api/v2/aqx_p_432?api_key=218c35f1-d697-447c-927f-677ea69efa8f&limit=1000&sort=ImportDate%20desc&format=JSON",
+      `/api/v2/aqx_p_432?api_key=${import.meta.env.VITE_API_KEY}&limit=1000&sort=ImportDate%20desc&format=JSON`,
     )
       .then((res) => res.json())
       .then((data) => {
