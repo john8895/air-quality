@@ -1,16 +1,33 @@
-# React + Vite
+# 台灣空氣品質即時地圖
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+即時顯示全台灣測站的空氣品質指標（AQI），結合 GPS 定位找出最近測站，並以顏色分級呈現空氣品質狀態。
 
-Currently, two official plugins are available:
+## 功能
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **GPS 定位**：自動偵測使用者位置，顯示最近測站的 AQI、狀態與更新時間
+- **互動地圖**：以 Leaflet 地圖標示全台測站，AQI 以顏色圓點呈現
+- **搜尋過濾**：輸入測站名稱或縣市，即時過濾測站列表與地圖標記
+- **AQI 色彩分級**：依環保署標準，6 級顏色對應空氣品質良好至危險
 
-## React Compiler
+## 截圖
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![空氣品質地圖截圖](src/assets/screenshot.png)
 
-## Expanding the ESLint configuration
+## 技術棧
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 19
+- Vite
+- Tailwind CSS 4
+- Leaflet / React-Leaflet
+- 環保署開放資料 API
+
+## 開發
+
+```bash
+npm install
+npm run dev
+```
+
+## 資料來源
+
+- [環境部開放資料平台 — AQI](https://data.moenv.gov.tw/)
