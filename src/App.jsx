@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     fetch(
-      `/api/v2/aqx_p_432?api_key=${import.meta.env.VITE_API_KEY}&limit=1000&sort=ImportDate%20desc&format=JSON`,
+      `https://data.moenv.gov.tw/api/v2/aqx_p_432?api_key=${import.meta.env.VITE_API_KEY}&limit=1000&sort=ImportDate%20desc&format=JSON`,
     )
       .then((res) => res.json())
       .then((data) => {
