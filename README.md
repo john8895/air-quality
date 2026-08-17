@@ -1,33 +1,37 @@
-# 台灣空氣品質即時地圖
+# Taiwan Air Quality Map
 
-即時顯示全台灣測站的空氣品質指標（AQI），結合 GPS 定位找出最近測站，並以顏色分級呈現空氣品質狀態。
+Real-time air quality index (AQI) map for Taiwan, powered by the Ministry of Environment open data API.
 
-## 功能
+## Live Demo
 
-- **GPS 定位**：自動偵測使用者位置，顯示最近測站的 AQI、狀態與更新時間
-- **互動地圖**：以 Leaflet 地圖標示全台測站，AQI 以顏色圓點呈現
-- **搜尋過濾**：輸入測站名稱或縣市，即時過濾測站列表與地圖標記
-- **AQI 色彩分級**：依環保署標準，6 級顏色對應空氣品質良好至危險
+**https://john8895.github.io/air-quality/**
 
-## 截圖
+## Features
 
-![空氣品質地圖截圖](src/assets/screenshot.png)
+- **GPS auto-locate** — finds the nearest monitoring station on load
+- **Interactive map** — color-coded markers for all stations (Leaflet)
+- **Search & filter** — type a station name or city to filter the list and map
+- **6-level AQI scale** — color grading follows Taiwan EPA standards (Good → Hazardous)
 
-## 技術棧
+## Tech Stack
 
-- React 19
-- Vite
-- Tailwind CSS 4
-- Leaflet / React-Leaflet
-- 環保署開放資料 API
+| Tech | Purpose |
+|------|---------|
+| React 19 | UI framework |
+| Vite | Build tool |
+| Tailwind CSS 4 | Styling |
+| Leaflet + React-Leaflet | Interactive map |
+| MOENV Open Data API | AQI data source |
 
-## 開發
+## Getting Started
 
 ```bash
+git clone https://github.com/john8895/air-quality.git
+cd air-quality
 npm install
 npm run dev
 ```
 
-## 資料來源
+## License
 
-- [環境部開放資料平台 — AQI](https://data.moenv.gov.tw/)
+MIT
